@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Javascript DOM</title>
+</head>
+<body >
+    <h1>A Simple List Adding Project</h1>
+    <p>Input some text and click add button</p>
+    <ol id = "mylist"></ol>
+    <input type = "text" id = "itemInput">
+    <button id = "addbutton">Add</button>
+
+    <script>
+     const inputtype = document.getElementById("itemInput");
+     const bclicked = document.getElementById("addbutton");
+     const mylist = document.getElementById("mylist");
+     bclicked.addEventListener("click", function() {
+       const enteredText = inputtype.value;
+       const newLi = document.createElement("li");
+       newLi.textContent = enteredText;
+       mylist.appendChild(newLi);
+       
+     })
+    </script>
+
+</body>
+</html>
